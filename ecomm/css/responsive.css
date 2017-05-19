@@ -1,0 +1,57 @@
+@media only screen and (max-width: 1000px) {
+	.submit {
+		width: 70px;
+		margin: 25px auto;
+	}
+	
+	.fileUpload {
+		margin:0;
+	}
+	
+	button.board-management {
+		display: block;
+		width:183px;
+		margin:10px auto 20px auto;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.position {
+		display:none;
+	}
+		
+	.full-name {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.product-detail {
+		padding:10px;
+	}
+	.featured-image {
+		clear:both;
+		width:100%;
+		margin:0;
+		padding:0;
+	}
+	.details {
+		width:100%;
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+	.product-detail {
+		width:100%;
+		margin: 50px 0 10px 0;
+		padding:10px;
+	}
+	
+	
+
+	.census, .registration, .details {
+		width:100%;
+		margin:1% 0;
+	}
+}

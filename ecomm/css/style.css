@@ -1,0 +1,300 @@
+body {
+	margin:0;
+	padding:0;
+	font-family: proxima-nova,"Proxima Nova","Helvetica Neue",Helvetica,Calibri,Arial,sans-serif;
+    line-height: 1.4em;
+	color:#605b51;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-family: inherit;
+    font-weight: 700;
+    color: #005187;
+    margin: 0;
+    margin-bottom: .7em;
+    margin-bottom: .7rem;
+}
+
+a {
+    text-decoration: none;
+    color: #66acd3;
+    background-color: transparent;
+	cursor: auto;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a:visited {
+    color: #66acd3;
+}
+
+img {
+	width:100%;
+	height:auto;
+}
+
+input, textarea {
+	clear:both;
+	width:100%;
+	margin: 5px 0 0 0;
+    padding: 6px 8px;
+    background-color: #fff;
+    border: 1px solid #dbd9d5;
+    border-radius: 4px;
+}
+
+
+input[type="file"] {
+  width : auto;
+  padding : initial;
+  line-height : initial;
+  border : initial;
+  background-color : transparent;
+  background-color : initial;
+  box-shadow: none;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    overflow: visible;
+    display: inline-block;
+    padding: 10px 15px 9px;
+    margin:7px 0;
+    font-size: 87.5%;
+    font-weight: 700;
+    line-height: 1.05em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #BCC659;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  background-color: #9ea73e;
+  color: #ffffff;
+}
+
+input[type="submit"] {
+	width:auto;
+}
+
+select.board {
+    height: 30px;
+}
+
+.submit {
+	width:auto;
+	margin:25px 0;
+}
+
+.container {
+	width:100%;
+	margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+	clear:both;
+	box-sizing: border-box;
+}
+
+div, input, textarea {
+	box-sizing: border-box;
+}
+
+.product-detail h2{
+	margin: -50px 0 25px -2%;
+}
+
+.product-detail {
+	width: 48%;
+	float: left;
+	clear:none;
+	padding: 1%;
+	margin: 50px 1% 1% 0;
+	background: #f0efee;
+}
+
+.featured-image {
+	width: 25%;
+	float:left;
+	margin: 5px 0 0 0;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.2;
+	color: #66acd3;
+}
+
+.details {
+	width:73%;
+	float:right;
+	margin: 0 0 0 2%;
+}
+
+.census{
+	width: 48%;
+	float: right;
+	clear:none;
+	margin: 1% 0 1% 1%;
+}
+
+.registration {
+    width: 48%;
+    float: left;
+    margin: 1% 1% 1% 0;
+    border-top: 1px solid #dbd9d5;
+    padding-top: 15px;
+}
+
+.when-box, .where-box, .county-box, .location-box, .time-box, .dinner-box, .description-box, .member-price-box, .list-price-box, .total-price {
+	margin:7px 0 0 0;
+}
+
+.when, .where, .county, .location, .time, .dinner, .description, .member-price, .list-price, .total-price .label {
+	float:left;
+	margin-right:5px;
+	font-weight:700;
+}
+
+.enter-po-number, .enter-po-file, .select-po-file {
+	margin:7px 5px 0 0;
+	float:left;
+	font-weight:700;
+}
+
+.label {
+	font-weight: 700;
+}
+
+.selected-attendees .text {
+	margin-left:20px;
+}
+
+.board {
+	width:100%;
+	margin:7px 0 !important;
+	color:#84837a;
+    vertical-align: baseline;
+    font-family: proxima-nova,"Proxima Nova","Helvetica Neue",Helvetica,Calibri,Arial,sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+	overflow:hidden;
+}
+
+button.board-management {
+	display:inline-block;
+	padding: 7px 10px 6px;
+    font-size: 14px;
+    font-size: .875rem;
+    background-color: #b3b3b3;
+}
+
+button.board-management:hover,
+button.board-management:focus {
+  background-color: #808080;
+  border-color: #808080;
+}
+
+.hidden {
+	display: none;
+}
+
+/*---------------------OVERRIDE DEFAULT UPLOAD BUTTON*/
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: 'Add File';
+  display: inline-block;
+  background: #b3b3b3;
+  border-radius: 3px;
+ 	padding: 7px 10px 6px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform:uppercase;
+  color:#FFFFFF;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.custom-file-input:hover::before {
+  background-color: #808080;
+  border-color: #808080;
+}
+
+.custom-file-input:active::before {
+ background-color: #808080;
+  border-color: #808080;
+}
+
+input[type=file]:focus {
+	box-shadow:none;
+	border:none !important;
+}
+
+/*--------------------ROSTER*/
+.roster {
+	display:table;
+	width:100%;
+	margin:10px 0;
+}
+
+.roster-header {
+	display:table-header-group;
+	font-weight:700;
+}
+
+.person {
+	display:table-row;
+}
+
+.all-person {
+    display: table-row-group;
+}
+
+.full-name, .position, .select, .registered {
+	display:table-cell;
+    padding: 8px;
+    border-top: 1px solid #dbd9d5;
+}
+
+
+.select {
+	display:table-cell;
+	width:50px;
+	text-align:center;
+}
+
+.full-name {
+	width:50%;
+}
+
+.position {
+	width:50%;
+}
