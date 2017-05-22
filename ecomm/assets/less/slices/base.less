@@ -4,6 +4,7 @@ body {
 	font-family: proxima-nova,"Proxima Nova","Helvetica Neue",Helvetica,Calibri,Arial,sans-serif;
     line-height: 1.4em;
 	color:#605b51;
+	background-color: @midneutralcolor;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,6 +36,10 @@ a:visited {
     color: #66acd3;
 }
 
+a:focus {
+	outline: #605b51 dotted 1px;
+}
+
 img {
 	width:100%;
 	height:auto;
@@ -50,6 +55,17 @@ input, textarea {
     border-radius: 4px;
 }
 
+input:focus, input:active, textarea:focus textarea:active {
+	box-shadow: 0 0 5px rgba(85, 201, 236, 1) !important;
+	border-radius:4px !important;
+	outline: none;
+}	
+
+button:focus, button:active {
+	outline: none;
+	box-shadow: none;
+}
+
 
 input[type="file"] {
   width : auto;
@@ -59,6 +75,10 @@ input[type="file"] {
   background-color : transparent;
   background-color : initial;
   box-shadow: none;
+}
+
+input[type="file"]:focus, input[type="file"]:active {
+	outline: none !important;
 }
 
 button, input[type=button], input[type=reset], input[type=submit] {
@@ -114,4 +134,12 @@ form {
 
 li ol, li ul {
     margin: 0;
+}
+
+.margin-top {
+	margin-top:40px;
+}
+
+.margin-bottom {
+	margin-bottom:40px;
 }

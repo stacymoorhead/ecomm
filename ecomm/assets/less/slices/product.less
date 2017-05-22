@@ -12,14 +12,34 @@ select.board {
 .container {
 	width:100%;
 	margin: 0 auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 3% 5%;
 	clear:both;
 	box-sizing: border-box;
+	background-color:#FFFFFF;
 }
 
 div, input, textarea {
 	box-sizing: border-box;
+}
+
+.right {
+	width: 48%;
+	float: right;
+	clear:none;
+	margin: 1% 0 0 1%;
+}
+
+.left {
+    width: 48%;
+    float: left;
+	clear: left;
+    margin: 0 1% 1% 0;
+}
+
+.horizontal-rule {
+	border-top: 1px solid #dbd9d5;
+    padding-top: 15px;
+	margin-top:25px;
 }
 
 .product-detail h2{
@@ -54,11 +74,15 @@ div, input, textarea {
 	margin: 0 0 0 2%;
 }
 
-.census {
+.select-district {
 	width: 48%;
 	float: right;
 	clear:none;
-	margin: 1% 0 4% 1%;
+	margin: 1% 0 0 1%;
+}
+
+.census {
+	margin-bottom: 5%;
 }
 
 .payment {
@@ -70,14 +94,14 @@ div, input, textarea {
     padding-top: 15px;
 }
 
-.registration {
+/*.registration {
     width: 48%;
     float: left;
 	clear: left;
     margin: 1% 1% 1% 0;
     border-top: 1px solid #dbd9d5;
     padding-top: 15px;
-}
+}*/
 
 .registration-other {
 	width: 48%;
@@ -132,15 +156,14 @@ div, input, textarea {
 }
 
 .addresses {
-	width:50%;
+	width:100%;
 	float:right;
 	clear:none;
 	box-sizing:border-box;
 }
 
 .verify-address, .shipping-address {
-	width:100%;
-	margin-left:50px;
+	width:48%;
 	float:left;
 }
 
@@ -156,14 +179,15 @@ button.board-management {
     background-color: #b3b3b3;
 }
 
-button.board-management:hover,
-button.board-management:focus {
+button.board-management:hover, {
   background-color: #808080;
   border-color: #808080;
+	text-decoration:none;
 }
 
-.hidden {
-	display: none;
+.submit input:active, .submit input:focus {
+	outline:none;
+	box-shadow:none !important;
 }
 
 /*---------------------OVERRIDE DEFAULT UPLOAD BUTTON*/

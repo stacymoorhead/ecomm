@@ -603,6 +603,7 @@ body {
   font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
   line-height: 1.4em;
   color: #605b51;
+  background-color: #44413a;
 }
 h1,
 h2,
@@ -618,6 +619,9 @@ h6 {
   margin-bottom: .7em;
   margin-bottom: .7rem;
 }
+p {
+  font-weight: 300;
+}
 a {
   text-decoration: none;
   color: #66acd3;
@@ -629,6 +633,9 @@ a:hover {
 }
 a:visited {
   color: #66acd3;
+}
+a:focus {
+  outline: #605b51 dotted 1px;
 }
 img {
   width: 100%;
@@ -644,6 +651,18 @@ textarea {
   border: 1px solid #dbd9d5;
   border-radius: 4px;
 }
+input:focus,
+input:active,
+textarea:focus textarea:active {
+  box-shadow: 0 0 5px #55c9ec !important;
+  border-radius: 4px !important;
+  outline: none;
+}
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
 input[type="file"] {
   width: auto;
   padding: initial;
@@ -652,6 +671,10 @@ input[type="file"] {
   background-color: transparent;
   background-color: initial;
   box-shadow: none;
+}
+input[type="file"]:focus,
+input[type="file"]:active {
+  outline: none !important;
 }
 button,
 input[type=button],
@@ -691,6 +714,9 @@ input[type="submit"]:focus {
 input[type="submit"] {
   width: auto;
 }
+input[type="checkbox"] {
+  width: auto;
+}
 form {
   margin: 10px 0;
 }
@@ -705,29 +731,11 @@ li ol,
 li ul {
   margin: 0;
 }
-.full {
-  width: 98%;
-  margin: 0 1%;
-  box-sizing: border-box;
-  clear: both;
+.margin-top {
+  margin-top: 40px;
 }
-.half {
-  width: 48%;
-  margin: 0 1%;
-  box-sizing: border-box;
-  float: left;
-}
-.one-quarter {
-  width: 24%;
-  margin: 0 1%;
-  box-sizing: border-box;
-  float: left;
-}
-.three-quarter {
-  width: 74%;
-  margin: 0 1%;
-  box-sizing: border-box;
-  float: left;
+.margin-bottom {
+  margin-bottom: 40px;
 }
 .span1 {
   display: inline;
@@ -936,15 +944,32 @@ select.board {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 3% 5%;
   clear: both;
   box-sizing: border-box;
+  background-color: #FFFFFF;
 }
 div,
 input,
 textarea {
   box-sizing: border-box;
+}
+.right {
+  width: 48%;
+  float: right;
+  clear: none;
+  margin: 1% 0 0 1%;
+}
+.left {
+  width: 48%;
+  float: left;
+  clear: left;
+  margin: 0 1% 1% 0;
+}
+.horizontal-rule {
+  border-top: 1px solid #dbd9d5;
+  padding-top: 15px;
+  margin-top: 25px;
 }
 .product-detail h2 {
   margin: -50px 0 25px -2%;
@@ -973,20 +998,31 @@ textarea {
   float: right;
   margin: 0 0 0 2%;
 }
-.census,
-.payment {
+.select-district {
   width: 48%;
   float: right;
   clear: none;
-  margin: 1% 0 4% 1%;
+  margin: 1% 0 0 1%;
 }
-.registration {
-  width: 48%;
+.census {
+  margin-bottom: 5%;
+}
+.payment {
+  width: 100%;
+  clear: both;
   float: left;
-  margin: 1% 1% 1% 0;
+  margin: 25px 1% 1% 0;
   border-top: 1px solid #dbd9d5;
   padding-top: 15px;
 }
+/*.registration {
+    width: 48%;
+    float: left;
+	clear: left;
+    margin: 1% 1% 1% 0;
+    border-top: 1px solid #dbd9d5;
+    padding-top: 15px;
+}*/
 .registration-other {
   width: 48%;
   float: right;
@@ -1036,7 +1072,7 @@ textarea {
 .contact-phone,
 .contact-email,
 .creditcard-number,
-.creaditcard-code,
+.creditcard-code,
 .creditcard-date,
 .creditcard-name {
   float: left;
@@ -1067,6 +1103,27 @@ textarea {
   max-width: 100%;
   overflow: hidden;
 }
+.creditcard-instruction {
+  margin-top: 25px;
+}
+.creditcard-form {
+  width: 50%;
+  float: left;
+}
+.addresses {
+  width: 100%;
+  float: right;
+  clear: none;
+  box-sizing: border-box;
+}
+.verify-address,
+.shipping-address {
+  width: 48%;
+  float: left;
+}
+.multi-address {
+  display: inline;
+}
 button.board-management {
   display: inline-block;
   padding: 7px 10px 6px;
@@ -1074,13 +1131,15 @@ button.board-management {
   font-size: .875rem;
   background-color: #b3b3b3;
 }
-button.board-management:hover,
-button.board-management:focus {
+button.board-management:hover {
   background-color: #808080;
   border-color: #808080;
+  text-decoration: none;
 }
-.hidden {
-  display: none;
+.submit input:active,
+.submit input:focus {
+  outline: none;
+  box-shadow: none !important;
 }
 /*---------------------OVERRIDE DEFAULT UPLOAD BUTTON*/
 .custom-file-input::-webkit-file-upload-button {
@@ -1152,9 +1211,17 @@ input[type=file]:focus {
 .position {
   width: 50%;
 }
+@media only screen and (max-width: 1080px) {
+  .creditcard-form {
+    width: 100%;
+  }
+  .addresses {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .submit {
-    width: 70px;
+    width: 85px;
     margin: 25px auto;
   }
   .fileUpload {
@@ -1173,6 +1240,20 @@ input[type=file]:focus {
   .full-name {
     width: 100%;
   }
+  .left,
+  .right {
+    width: 100%;
+    margin: 1% 0;
+  }
+  .product-detail {
+    width: 100%;
+    margin: 50px 0 10px 0;
+    padding: 10px;
+  }
+  .select-district {
+    width: 100%;
+    margin: 1% 0;
+  }
 }
 @media only screen and (max-width: 700px) {
   .product-detail {
@@ -1189,10 +1270,11 @@ input[type=file]:focus {
   }
 }
 @media only screen and (max-width: 500px) {
-  .product-detail {
+  .billing-address,
+  .shipping-address,
+  .verify-address {
     width: 100%;
-    margin: 50px 0 10px 0;
-    padding: 10px;
+    margin: 0;
   }
   .census,
   .registration,
@@ -1248,8 +1330,7 @@ input[type=file]:focus {
 .page-header {
   background: #44413a url('../images/pattern-triangles-small.png') repeat;
   padding: 1.4em 5%;
-  margin-bottom: 2.8em;
-  margin-bottom: 2.8rem;
+  /*.margin-bottom(@basebottommargin*2);*/
   *zoom: 1;
   color: #ffffff;
 }
